@@ -1,0 +1,19 @@
+{
+    "name": "harold/joyeria",
+    "autoload": {
+        "psr-4": {
+            "Harold\\Joyeria\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "snakepatch53",
+            "email": "snakepatch53@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+        "bramus/router": "^1.6",
+        "dompdf/dompdf": "^2.0"
+    }
+}
