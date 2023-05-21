@@ -2,7 +2,9 @@ DROP TABLE IF EXISTS info;
 
 CREATE TABLE info (
     info_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    info_nombre VARCHAR(100),
+    info_name VARCHAR(100),
+    info_logo VARCHAR(50) DEFAULT '',
+    info_icon VARCHAR(50) DEFAULT '',
     info_last VARCHAR(50),
     info_created VARCHAR(50)
 ) ENGINE INNODB;
@@ -10,7 +12,7 @@ CREATE TABLE info (
 INSERT INTO
     info
 SET
-    info_nombre = 'Joyeria y Relojeria "El Sol"',
+    info_name = 'Joyeria y Relojeria "El Sol"',
     info_last = '2023-01-01 00:00:00',
     info_created = '2023-01-01 00:00:00';
 

@@ -11,5 +11,5 @@
         weekdaysMin: 'Do_Lu_Ma_Mi_Ju_Vi_Sa'.split('_')
     });
 </script>
-<script src="<?= $DATA['http_domain'] ?>public/js.public/template.js"></script>
+<!-- <script src="<?= $DATA['http_domain'] ?>public/js.public/template.js"></script> -->
 <script src="<?= $DATA['http_domain'] ?>public/js.general/fetch.js"></script>

@@ -21,7 +21,7 @@ class InfoDao
             $mapa = '<iframe src="' . $mapa . '" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
         }
         $row['info_mapa'] = $mapa;
-        return $row;
+        return $this->schematize($row);
     }
 
     public function update(
@@ -62,5 +62,35 @@ class InfoDao
             return true;
         }
         return false;
+    }
+
+    private function schematize($row)
+    {
+        $PATH_DEFAULT = $_ENV['HTTP_DOMAIN'] . "public/img/";
+        $PATH_FILES = $_ENV['HTTP_DOMAIN'] . "public/img.info/";
+
+        // case logo
+        // $row['info_logo_url'] = $this->getContent('logo.svg');
+        $row['info_logo_url'] = $PATH_DEFAULT . 'logo.png?last=' . $row['info_last'];
+        if ($row['info_logo'] != '' && $row['info_logo'] != null) $row['info_logo_url'] = $PATH_FILES . $row['info_logo'] . "?last=" . $row['info_last'];
+        $row['info_logo_url2'] = $PATH_DEFAULT . 'logo.png?last=' . $row['info_last'];
+        if ($row['info_logo'] != '' && $row['info_logo'] != null) $row['info_logo_url2'] = $PATH_FILES . $row['info_logo'] . "?last=" . $row['info_last'];
+
+        // case icon
+        // $row['info_icon_url'] = $this->getContent('icon.svg');
+        $row['info_icon_url'] = $PATH_DEFAULT . 'icon.png?last=' . $row['info_last'];
+        if ($row['info_icon'] != '' && $row['info_icon'] != null) $row['info_icon_url'] = $PATH_FILES . $row['info_icon'] . "?last=" . $row['info_last'];
+        $row['info_icon_url2'] = $PATH_DEFAULT . 'icon.png';
+        if ($row['info_icon'] != '' && $row['info_icon'] != null) $row['info_icon_url2'] = $PATH_FILES . $row['info_icon'] . "?last=" . $row['info_last'];
+
+        return $row;
+    }
+
+    private function getContent($file = 'logo.svg')
+    {
+        ob_start();
+        include('./public/img/' . $file);
+        $content = ob_get_clean();
+        return $content;
     }
 }
