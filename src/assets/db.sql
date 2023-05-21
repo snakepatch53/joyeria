@@ -10,7 +10,7 @@ CREATE TABLE info (
 INSERT INTO
     info
 SET
-    info_nombre = 'Clínica Odontología del Dr. Claudio Ayora',
+    info_nombre = 'Joyeria y Relojeria "El Sol"',
     info_last = '2023-01-01 00:00:00',
     info_created = '2023-01-01 00:00:00';
 
@@ -29,21 +29,21 @@ INSERT INTO
 VALUES
     (
         1,
-        'Bienvenido a la Clínica Odontología del Dr. Claudio ayora',
+        'Bienvenido a Joyeria y Relojeria "El Sol"',
         '1.png',
         '2023-01-01 00:00:00',
         '2023-01-01 00:00:00'
     ),
     (
         2,
-        'El mejor equipo de odontólogos en Sucua',
+        'El mejor equipo de joyeros y relojeros a su servicio',
         '2.png',
         '2023-01-01 00:00:00',
         '2023-01-01 00:00:00'
     ),
     (
         3,
-        'Nuestro trabajo es garantizar su bienestar dental',
+        'Nuestro trabajo es garantizar su satisfaccion',
         '3.png',
         '2023-01-01 00:00:00',
         '2023-01-01 00:00:00'
