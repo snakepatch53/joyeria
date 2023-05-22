@@ -32,3 +32,13 @@ function deleteFile($path)
     }
     return false;
 }
+
+function getLogo($logo_url, ...$props)
+{
+    $props = implode(' ', $props);
+    if (str_contains($logo_url, '<svg')) {
+        return $logo_url;
+    } else {
+        return "<img src='$logo_url' $props />";
+    }
+}

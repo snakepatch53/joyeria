@@ -1,0 +1,16 @@
+:root {
+    --color-danger: #c71c22;
+    --color-info: #2fa4e7;
+    --color-warn: #eab518;
+    --color-success: #73a839;
+    
+    --color1-bg: #5c5ccd;
+    --color1-bg-translucent: rgba(92, 92, 205, 0.82);
+    --color1-txt: #ffffff;
+    
+    --color2-bg: #fac314;
+    --color2-txt: #000000;
+
+}
+
+body.dark {}
