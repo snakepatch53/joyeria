@@ -116,7 +116,6 @@ main {
     align-items: center;
     width: 40px;
     height: 40px;
-    background: #000;
     margin: auto 0;
     border-radius: 3px;
 }
@@ -126,6 +125,7 @@ main {
     height: 100%;
     cursor: pointer;
     transition: all 0.1s ease;
+    background: transparent;
 }
 
 .shop .search .cart button:hover {
