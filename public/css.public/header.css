@@ -5,9 +5,10 @@ header {
 
     --c1-btn-bg: var(--color2-bg);
     --c1-btn-txt: var(--color2-txt);
-    
-    position: sticky;
+
+    position: fixed;
     top: 0;
+    z-index: 10000;
 
     display: flex;
     flex-direction: column;
@@ -25,11 +26,13 @@ header .header {
     width: 100%;
     height: 100%;
     padding: 0 var(--padding);
-    background: var(--c1-bg);
+    /*    background: var(--c1-bg);*/
+    background: transparent;
 }
 
 header .container {
     display: flex;
+    align-items: center;
     width: 100%;
     max-width: var(--max-width);
     gap: 40px;
@@ -93,6 +96,11 @@ header nav ul li.more {
     gap: 20px;
 }
 
+header nav ul li.more button span {
+    font-size: 1rem;
+    display: none;
+}
+
 header nav ul li.more .contactus {
     background: var(--c1-btn-bg);
     color: var(--c1-btn-txt);
@@ -128,8 +136,94 @@ body.dark header nav ul li.more .btn-darkmode i.light {
     display: block;
 }
 
-header nav ul li.more .btn-darkmode {}
+/*header nav ul li.more .btn-darkmode {}*/
 
 header .toggle-menu {
     display: none;
+    margin-left: auto;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: transparent;
+    transition: background, transform 0.2s ease;
+}
+
+header .toggle-menu:active {
+    transform: scale(1.1);
+    background: rgba(0, 0, 0, 0.1);
+}
+
+header .toggle-menu i {
+    font-size: 1rem;
+    color: var(--c1-txt);
+}
+
+@media (max-width: 900px) {
+    header nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        width: 100%;
+        max-width: calc(100% - 40px);
+        height: auto;
+        max-height: 0;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 0 0 5px 5px;
+        opacity: 0;
+        transition: max-height, opacity 0.2s ease;
+        background: var(--c1-bg-translucent);
+    }
+
+    header.menu-open .header {
+        background: var(--c1-bg-translucent);
+    }
+
+    header.menu-open nav {
+        max-height: 100vh;
+        opacity: 1;
+        box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px;
+        padding-right: var(--padding);
+    }
+
+    header nav ul li a {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 0;
+    }
+    
+    header nav ul li.more .btn-darkmode {   
+        font-size: 1rem;
+    }
+
+    header nav ul li.more {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li.more button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        margin: auto;
+    }
+
+    header nav ul li.more button span {
+        display: block;
+    }
+
+    header .toggle-menu {
+        display: block;
+    }
 }

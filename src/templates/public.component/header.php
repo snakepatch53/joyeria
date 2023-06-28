@@ -19,6 +19,7 @@
                 </li>
                 <li class="more">
                     <button class="btn-darkmode" id="theme-toggle">
+                        <span>Dark Mode</span>
                         <i class="dark fas fa-moon"></i>
                         <i class="light fas fa-sun"></i>
                     </button>

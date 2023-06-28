@@ -20,8 +20,9 @@ DROP TABLE IF EXISTS slider;
 
 CREATE TABLE slider (
     slider_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    slider_titulo VARCHAR(100),
-    slider_imagen VARCHAR(50),
+    slider_img VARCHAR(150),
+    slider_title VARCHAR(50),
+    slider_desc TEXT,
     slider_last VARCHAR(50),
     slider_created VARCHAR(50)
 ) ENGINE INNODB;
@@ -31,22 +32,25 @@ INSERT INTO
 VALUES
     (
         1,
-        'Bienvenido a Joyeria y Relojeria "El Sol"',
         '1.png',
+        '',
+        '',
         '2023-01-01 00:00:00',
         '2023-01-01 00:00:00'
     ),
     (
         2,
-        'El mejor equipo de joyeros y relojeros a su servicio',
         '2.png',
+        '',
+        '',
         '2023-01-01 00:00:00',
         '2023-01-01 00:00:00'
     ),
     (
         3,
-        'Nuestro trabajo es garantizar su satisfaccion',
         '3.png',
+        '',
+        '',
         '2023-01-01 00:00:00',
         '2023-01-01 00:00:00'
     );

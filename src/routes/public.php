@@ -9,12 +9,14 @@ $radapter = new RAdapter($router, $_TEMPLATE_PUBLIC_PATH, $_ENV['HTTP_DOMAIN']);
 // HOME
 $radapter->getHTML('/index.php', 'home', function ($DATA) {
     return [
-        'info' => (new InfoDao($DATA['mysqlAdapter']))->select()
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+        'slider' => (new SliderDao($DATA['mysqlAdapter']))->select()
     ];
 });
 $radapter->getHTML('/', 'home', function ($DATA) {
     return [
-        'info' => (new InfoDao($DATA['mysqlAdapter']))->select()
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+        'slider' => (new SliderDao($DATA['mysqlAdapter']))->select()
     ];
 });
 // 404

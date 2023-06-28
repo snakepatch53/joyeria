@@ -1,8 +1,8 @@
 const swiper = new Swiper(".swiper", {
-    speed: 400,
+    speed: 2000,
     allowTouchMove: true,
     autoplay: {
-        delay: 5000,
+        delay: 3000,
     },
     effect: "fade",
     fadeEffect: {
@@ -14,6 +14,3 @@ const swiper = new Swiper(".swiper", {
     },
 });
 const $swiper = document.querySelector(".swiper").swiper;
-
-// Now you can use all slider methods like
-// $swiper.slideNext();
