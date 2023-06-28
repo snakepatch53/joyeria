@@ -6,28 +6,37 @@ header {
     --c1-btn-bg: var(--color2-bg);
     --c1-btn-txt: var(--color2-txt);
 
-    position: fixed;
-    top: 0;
+    --c2-bg: #c18e37;
+
+    position: sticky;
+    top: 20px;
     z-index: 10000;
 
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     height: var(--header-height);
+    margin-top: 20px;
+    padding: 0 var(--padding);
 }
 
 header.float .header {
     background: var(--c1-bg-translucent);
+    backdrop-filter: blur(5px);
 }
 
 header .header {
     display: flex;
     justify-content: center;
     width: 100%;
+    max-width: var(--max-width);
     height: 100%;
-    padding: 0 var(--padding);
-    /*    background: var(--c1-bg);*/
-    background: transparent;
+    box-shadow: var(--shadow);
+    padding: 0 20px;
+    background: var(--c1-bg);
+    overflow: hidden;
+    border-radius: var(--radio);
 }
 
 header .container {
@@ -50,6 +59,18 @@ header .logo svg {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+header .title {
+    display: none;
+    margin: auto;
+}
+
+header .title h1 {
+    font-family: title;
+    color: var(--c2-bg);
+    letter-spacing: 0.15rem;
+    font-size: 1.6rem;
 }
 
 header nav {
@@ -159,19 +180,23 @@ header .toggle-menu i {
 }
 
 @media (max-width: 900px) {
+    header .title {
+        display: block;
+    }
+
     header nav {
         position: absolute;
-        top: 100%;
+        top: calc(100% + 10px);
         left: 0;
         right: 0;
         z-index: -1;
         width: 100%;
-        max-width: calc(100% - 40px);
+        max-width: calc(100% - var(--padding) * 2);
         height: auto;
         max-height: 0;
         margin: auto;
         overflow: hidden;
-        border-radius: 0 0 5px 5px;
+        border-radius: 5px;
         opacity: 0;
         transition: max-height, opacity 0.2s ease;
         background: var(--c1-bg-translucent);
@@ -201,8 +226,8 @@ header .toggle-menu i {
         align-items: center;
         padding: 5px 0;
     }
-    
-    header nav ul li.more .btn-darkmode {   
+
+    header nav ul li.more .btn-darkmode {
         font-size: 1rem;
     }
 
@@ -225,5 +250,19 @@ header .toggle-menu i {
 
     header .toggle-menu {
         display: block;
+    }
+}
+
+@media(max-width: 700px) {
+
+    header .title h1 {
+        letter-spacing: 2px;
+        font-size: 1.3rem;
+    }
+}
+
+@media(max-width: 500px) {
+    header .title h1 {
+        display: none;
     }
 }

@@ -19,6 +19,15 @@ $radapter->getHTML('/', 'home', function ($DATA) {
         'slider' => (new SliderDao($DATA['mysqlAdapter']))->select()
     ];
 });
+
+// TIENDA
+$radapter->getHTML('/tienda', 'tienda', function ($DATA) {
+    return [
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+        'slider' => (new SliderDao($DATA['mysqlAdapter']))->select()
+    ];
+});
+
 // 404
 $radapter->set404('404', function ($DATA) {
     return [

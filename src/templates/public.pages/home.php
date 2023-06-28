@@ -5,12 +5,6 @@
     <?php include('./src/templates/public.component/head.php') ?>
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/slider.css">
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/inicio.css">
-    <style>
-        :root {
-            --url_bg_wave_bottom: url('<?= $DATA['http_domain'] ?>public/img/bg_wave_bottom.svg');
-            --url_bg_wave_top: url('<?= $DATA['http_domain'] ?>public/img/bg_wave_top.svg');
-        }
-    </style>
 </head>
 
 <body>

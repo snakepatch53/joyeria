@@ -3,6 +3,8 @@ slider {
     display: flex;
     width: 100%;
     height: calc(50vh - var(--header-height));
+    margin-top: 20px;
+    padding: 0 var(--padding);
 }
 
 slider img {
@@ -13,11 +15,15 @@ slider img {
 }
 
 .swiper {
+    width: 100%;
+    max-width: var(--max-width);
     height: 100%;
+    border-radius: var(--radio);
+    box-shadow: var(--shadow);
 }
 
 
-slider:before {
+.swiper:before {
     position: absolute;
     inset: 0 0 0 0;
     z-index: 100;

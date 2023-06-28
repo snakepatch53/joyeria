@@ -1,7 +1,10 @@
 <div class="header float">
     <div class="container">
-        <div class="logo">
+        <a href="<?= $DATA['http_domain'] ?>" class="logo">
             <?= getLogo($DATA['info']['info_logo_url'], "alt='Logo " . $DATA['info']['info_name'] . "'") ?>
+        </a>
+        <div class="title">
+            <h1>Relojeria y Joyeria "El Sol"</h1>
         </div>
         <nav>
             <ul>

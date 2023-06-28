@@ -9,9 +9,16 @@
 }
 
 :root {
-    --max-width: 1200px;
+    --max-width: 1400px;
     --padding: 50px;
     --header-height: 90px;
+    --shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.3);
+    --radio: 5px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 60px;
 }
 
 main {
