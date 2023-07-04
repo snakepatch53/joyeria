@@ -84,11 +84,11 @@ Crea la base de datos
 Luego puedes usar el servicio de configuración para crear las tablas y los datos inciales:
 
 ```http
-  {{YOUR_DOMAIN}}/configuration
+  {{YOUR_DOMAIN}}/config
 ```
 
 para generar la base de datos y las tablas.
-Luego es importante que desabilites el servicio de configuración para que no se sobreescriban los datos.
+Luego es importante que desabilites el servicio de configuración para que no se pierdan datos.
 
 ## 🪶 APACHE
 
