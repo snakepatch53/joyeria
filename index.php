@@ -36,8 +36,6 @@ $router = new \Bramus\Router\Router();
 
 // declaramos las rutas
 require __DIR__ . '/src/routes/services.php';
-require __DIR__ . '/src/routes/public.php';
-require __DIR__ . '/src/routes/panel.php';
 
 // iniciamos el router xd
 $router->run();
